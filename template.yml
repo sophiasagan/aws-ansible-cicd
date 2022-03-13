@@ -1,14 +1,14 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: ND9991 C3 L4 
+Description: Ansible Playbook Project 
 Resources:
   EC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
-      KeyName: udagramwebapp
+      KeyName: ansible
       ImageId: 'ami-04505e74c0741db8d' # you may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
-      InstanceType: t2.medium
+      InstanceType: t2.micro
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
